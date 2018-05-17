@@ -5,5 +5,5 @@
     "command": "java -jar XwingApp-1.0.jar",
     "release": {
     },
-    "notes": ""
+    "notes": "Java fighter"
 }
