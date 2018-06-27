@@ -1,4 +1,4 @@
-/* Copyright © 2016 Oracle and/or its affiliates. All rights reserved. */
+/* Copyright Â© 2016 Oracle and/or its affiliates. All rights reserved. */
 package com.example.rest;
  
 import java.util.Optional;
@@ -41,7 +41,6 @@ public class App {
         System.out.println("Server started");
  
         //runGetRequest();
-        //runDatabaseQuery();
     }
  
     /**
@@ -70,25 +69,5 @@ public class App {
                 System.out.println(ie);
             }
         }    
-    }
- 
-    /**
-     * Performs a call to the database.
-     */
-    private static void runDatabaseQuery() {
-        String host = "myHost";
-        String database = "myDatabase";
-        String user = "myUsername";
-        String password = "myPassword";
-        DBConnection db = new DBConnection("jdbc:mysql://" 
-                + host + "/" 
-                + database + "?user=" 
-                + user + "&password=" 
-                + password);
-        try {
-            db.readData();
-        } catch (Exception e) {
-            System.out.println(e);
-        }
     }
 }
