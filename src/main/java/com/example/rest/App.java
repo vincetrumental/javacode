@@ -41,17 +41,22 @@ public class App {
  
         System.out.println("Server started");
  
-        runGetRequest();
+        //runGetRequest();
+        for (int i=0; i<10; i++){
+          runGetRequest(i);
+        } 
     }
  
     /**
      * Performs a simple GET request and prints the result to the log.
      */
-    private static void runGetRequest() {
+    private static void runGetRequest(int ycoord) {
  
     	// sample URL
-        String url = "http://129.157.179.180:3000/shield/33/45/yellow/vincetrumental";
-        CloseableHttpResponse response = null;
+        //String url = "http://129.157.179.180:3000/shield/33/45/yellow/vincetrumental";
+     String url = "http://129.157.179.180:3000/fighters/45/"+ycoord+"/yellow/vincetrumental";
+     //http://129.157.179.180:3000/fighters/45/y-coordinate_goes_here/Your_squad_color_goes_here/Your_microservice_name_goes_here   
+     CloseableHttpResponse response = null;
  
         try {
             CloseableHttpClient httpclient = HttpClients.createDefault();
